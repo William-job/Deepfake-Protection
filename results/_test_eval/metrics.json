@@ -1,0 +1,25 @@
+{
+  "dataset": "celebdf",
+  "split": "val",
+  "checkpoint": "checkpoints_v6/best_model_joint_celebdf.pt",
+  "checkpoint_epoch": 8,
+  "config_path": "configs/joint_train.yaml",
+  "timestamp": "2026-06-28T11:51:22",
+  "used_ema": true,
+  "threshold_source": "youden",
+  "threshold": 0.9316986799240112,
+  "auc": 0.8555169465174131,
+  "accuracy": 0.7550852681323197,
+  "f1": 0.8585498991337368,
+  "ap": 0.996937088038613,
+  "eer": 0.208955223880597,
+  "tpr_at_fpr_1": 0.0534375,
+  "tpr_at_fpr_01": 0.034583333333333334,
+  "num_samples": 9734,
+  "confusion_matrix": {
+    "tp": 7235,
+    "tn": 115,
+    "fp": 19,
+    "fn": 2365
+  }
+}

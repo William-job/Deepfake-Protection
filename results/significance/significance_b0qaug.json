@@ -1,0 +1,23 @@
+{
+  "protocol": "paired bootstrap n=10000, seed=2024, same test sample order (uint8 cache); z-test = bootstrap-variance paired z",
+  "n_test_samples": 5418,
+  "n_pairs": 1,
+  "timestamp": "2026-08-29T15:44:19",
+  "results": [
+    {
+      "pair": "car vs efficientnet_b0_qaug",
+      "desc": "car vs efficientnet_b0_qaug",
+      "auc_a": 0.8675,
+      "auc_b": 0.885,
+      "delta_auc": -0.0175,
+      "bootstrap_p": 0.1154,
+      "bootstrap_ci95": [
+        -0.0394,
+        0.0044
+      ],
+      "z_test_p": 0.116844,
+      "significant_0.05": false,
+      "significant_bonferroni": false
+    }
+  ]
+}

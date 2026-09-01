@@ -1,0 +1,166 @@
+{
+  "table": "Table 4: Cross-Dataset Generalization",
+  "configs_evaluated": 4,
+  "results": [
+    {
+      "name": "Celeb-DF -> FF++ c23",
+      "checkpoint": "checkpoints_v6/best_model_joint_celebdf.pt",
+      "checkpoint_epoch": 8,
+      "source_dataset": "celebdf",
+      "source_compression": "c23",
+      "target_dataset": "ffpp",
+      "target_compression": "c23",
+      "threshold": 0.9316986799240112,
+      "threshold_source": "source_val(celebdf)",
+      "overall": {
+        "accuracy": 0.74,
+        "auc": 0.8801020408163266,
+        "ap": 0.9615332734429437,
+        "f1": 0.8123711340206186,
+        "threshold": 0.9316986799240112,
+        "eer": 0.14285714285714285,
+        "tpr_at_fpr_1": 0.18928571428571428,
+        "tpr_at_fpr_01": 0.18928571428571428,
+        "num_samples": 350
+      },
+      "per_method": {
+        "Deepfakes": {
+          "accuracy": 0.8071428571428572,
+          "auc": 0.8887755102040816,
+          "ap": 0.8755833926106262,
+          "f1": 0.7906976744186046,
+          "threshold": 0.9316986799240112,
+          "eer": 0.14285714285714285,
+          "tpr_at_fpr_1": 0.17142857142857143,
+          "tpr_at_fpr_01": 0.17142857142857143,
+          "num_samples": 140,
+          "num_fake": 70,
+          "num_real": 70
+        },
+        "Face2Face": {
+          "accuracy": 0.8,
+          "auc": 0.8736734693877551,
+          "ap": 0.8634148236040411,
+          "f1": 0.78125,
+          "threshold": 0.9316986799240112,
+          "eer": 0.14285714285714285,
+          "tpr_at_fpr_1": 0.12857142857142856,
+          "tpr_at_fpr_01": 0.12857142857142856,
+          "num_samples": 140,
+          "num_fake": 70,
+          "num_real": 70
+        },
+        "FaceSwap": {
+          "accuracy": 0.7571428571428571,
+          "auc": 0.8679591836734695,
+          "ap": 0.8665757683557178,
+          "f1": 0.7213114754098361,
+          "threshold": 0.9316986799240112,
+          "eer": 0.18571428571428572,
+          "tpr_at_fpr_1": 0.21428571428571427,
+          "tpr_at_fpr_01": 0.21428571428571427,
+          "num_samples": 140,
+          "num_fake": 70,
+          "num_real": 70
+        },
+        "NeuralTextures": {
+          "accuracy": 0.8142857142857143,
+          "auc": 0.8899999999999999,
+          "ap": 0.8827950843194055,
+          "f1": 0.8,
+          "threshold": 0.9316986799240112,
+          "eer": 0.14285714285714285,
+          "tpr_at_fpr_1": 0.24285714285714285,
+          "tpr_at_fpr_01": 0.24285714285714285,
+          "num_samples": 140,
+          "num_fake": 70,
+          "num_real": 70
+        }
+      }
+    },
+    {
+      "name": "Celeb-DF -> FF++ c40",
+      "error": "need at least one array to concatenate",
+      "overall": null,
+      "per_method": {}
+    },
+    {
+      "name": "FF++ -> Celeb-DF",
+      "checkpoint": "checkpoints_v6/best_model_joint_ffpp.pt",
+      "checkpoint_epoch": 12,
+      "source_dataset": "ffpp",
+      "source_compression": "c23",
+      "target_dataset": "celebdf",
+      "target_compression": "c23",
+      "threshold": 0.0680808573961258,
+      "threshold_source": "source_val(ffpp)",
+      "overall": {
+        "accuracy": 0.9669619785898855,
+        "auc": 0.7101686465391543,
+        "ap": 0.9725606961305857,
+        "f1": 0.983203528197429,
+        "threshold": 0.0680808573961258,
+        "eer": 0.3089887640449438,
+        "tpr_at_fpr_1": 0.0005725190839694657,
+        "tpr_at_fpr_01": 0.0005725190839694657,
+        "num_samples": 5418
+      }
+    },
+    {
+      "name": "FF++-finetune -> Celeb-DF",
+      "checkpoint": "checkpoints_v6/best_model_ffpp.pt",
+      "checkpoint_epoch": 5,
+      "source_dataset": "ffpp",
+      "source_compression": "c23",
+      "target_dataset": "celebdf",
+      "target_compression": "c23",
+      "threshold": 0.7124447822570801,
+      "threshold_source": "source_val(ffpp)",
+      "overall": {
+        "accuracy": 0.5957918050941307,
+        "auc": 0.850809460502616,
+        "ap": 0.994275747240982,
+        "f1": 0.7360809833694866,
+        "threshold": 0.7124447822570801,
+        "eer": 0.24157303370786518,
+        "tpr_at_fpr_1": 0.5715648854961832,
+        "tpr_at_fpr_01": 0.5326335877862596,
+        "num_samples": 5418
+      }
+    }
+  ],
+  "catastrophic_forgetting": {
+    "before_checkpoint": "checkpoints_v6/best_model_joint_celebdf.pt",
+    "after_checkpoint": "checkpoints_v6/best_model_ffpp.pt",
+    "before_auc_celebdf_test": 0.8370861566172055,
+    "after_auc_celebdf_test": 0.850809460502616,
+    "auc_drop": -0.013723303885410432,
+    "before_metrics": {
+      "accuracy": 0.7779623477297896,
+      "auc": 0.8370861566172055,
+      "ap": 0.9886944968063491,
+      "f1": 0.8712956028672302,
+      "threshold": 0.9316986799240112,
+      "eer": 0.20786516853932585,
+      "tpr_at_fpr_1": 0.0011450381679389313,
+      "tpr_at_fpr_01": 0.0003816793893129771
+    },
+    "after_metrics": {
+      "accuracy": 0.5957918050941307,
+      "auc": 0.850809460502616,
+      "ap": 0.994275747240982,
+      "f1": 0.7360809833694866,
+      "threshold": 0.7124447822570801,
+      "eer": 0.24157303370786518,
+      "tpr_at_fpr_1": 0.5715648854961832,
+      "tpr_at_fpr_01": 0.5326335877862596,
+      "num_samples": 5418
+    }
+  },
+  "ff_methods": [
+    "Deepfakes",
+    "Face2Face",
+    "FaceSwap",
+    "NeuralTextures"
+  ]
+}

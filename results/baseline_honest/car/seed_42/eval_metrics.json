@@ -1,0 +1,29 @@
+{
+  "model": "car",
+  "display_name": "CAR",
+  "seed": 42,
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results/baseline_honest\\car\\seed_42\\checkpoints\\best_model.pt",
+  "threshold_source": "val",
+  "scoring": "sigmoid",
+  "used_ema": true,
+  "num_samples": 5418,
+  "val_threshold_info": {
+    "val_num_samples": 9734,
+    "val_auc": 0.8786528296019901
+  },
+  "confusion_matrix": {
+    "tp": 3735,
+    "tn": 160,
+    "fp": 18,
+    "fn": 1505
+  },
+  "timestamp": "2026-08-23T20:18:30",
+  "auc": 0.8900452440174971,
+  "accuracy": 0.7188999630860096,
+  "f1": 0.8306460580451462,
+  "ap": 0.9958008496684727,
+  "eer": 0.20786516853932585,
+  "tpr_at_fpr_1": 0.6106870229007634,
+  "tpr_at_fpr_01": 0.4963740458015267,
+  "threshold": 0.6766995191574097
+}

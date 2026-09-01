@@ -1,0 +1,71 @@
+{
+  "note": "val_auc 为预训练后（未做下游微调）的零样本 val AUC，用于对照'初始化对下游判别力的影响'，不代表最终 CAR 性能",
+  "rows": [
+    {
+      "mode": "R1",
+      "desc": "随机初始化（无 ImageNet）+ Level2/3",
+      "val_auc": 0.6152,
+      "router_kl": 0.8177,
+      "level2": {
+        "motion": {
+          "acc": 0.5,
+          "auc": 0.5,
+          "batches": 30
+        },
+        "temporal": {
+          "acc": 0.625,
+          "auc": 0.6719,
+          "batches": 30
+        },
+        "spectral": {
+          "acc": 0.625,
+          "auc": 0.7344,
+          "batches": 30
+        },
+        "boundary": {
+          "acc": 0.5625,
+          "auc": 0.6719,
+          "batches": 30
+        }
+      },
+      "missing": false
+    },
+    {
+      "mode": "R2",
+      "desc": "ImageNet stem（无 artifact 预训练）",
+      "val_auc": 0.245,
+      "router_kl": null,
+      "level2": null,
+      "missing": false
+    },
+    {
+      "mode": "R3",
+      "desc": "ImageNet stem + 完整 Level2/3（CAR-aware）",
+      "val_auc": 0.3702,
+      "router_kl": 0.7101,
+      "level2": {
+        "motion": {
+          "acc": 0.5,
+          "auc": 0.4844,
+          "batches": 30
+        },
+        "temporal": {
+          "acc": 0.625,
+          "auc": 0.7344,
+          "batches": 30
+        },
+        "spectral": {
+          "acc": 1.0,
+          "auc": 1.0,
+          "batches": 30
+        },
+        "boundary": {
+          "acc": 1.0,
+          "auc": 1.0,
+          "batches": 30
+        }
+      },
+      "missing": false
+    }
+  ]
+}

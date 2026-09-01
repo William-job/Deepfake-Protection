@@ -1,0 +1,151 @@
+{
+  "car": {
+    "display": "CAR (ours)",
+    "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\final_car_v3\\checkpoints\\best_model.pt",
+    "parameters": {
+      "total": 5191013,
+      "total_M": 5.191,
+      "groups": {
+        "stem": 3595388,
+        "motion_head": 483840,
+        "boundary_head": 451584,
+        "fusion": 405060,
+        "temporal_head": 143616,
+        "experts": 67080,
+        "spectral_head": 43392,
+        "head_norms": 1024,
+        "gating": 29
+      }
+    },
+    "flops": {
+      "flops_G": 3.82,
+      "params_from_thop_M": 5.019,
+      "error": null,
+      "input_shape": [
+        1,
+        8,
+        3,
+        224,
+        224
+      ]
+    },
+    "speed": {
+      "gpu_fps": 67.4,
+      "gpu_latency_ms": 14.84,
+      "cpu_fps": 8.3,
+      "cpu_latency_ms": 120.4
+    },
+    "model_size": {
+      "fp32_MB": 19.8,
+      "int8_MB_est": 4.95
+    }
+  },
+  "efficientnet_b0": {
+    "display": "EfficientNet-B0",
+    "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_honest\\efficientnet_b0\\seed_42\\best_model.pt",
+    "parameters": {
+      "total": 4010110,
+      "total_M": 4.01,
+      "groups": {
+        "backbone": 4009246,
+        "stem": 864
+      }
+    },
+    "flops": {
+      "flops_G": 3.077,
+      "params_from_thop_M": 3.968,
+      "error": null,
+      "input_shape": [
+        1,
+        8,
+        3,
+        224,
+        224
+      ]
+    },
+    "speed": {
+      "gpu_fps": 181.7,
+      "gpu_latency_ms": 5.5,
+      "cpu_fps": 9.68,
+      "cpu_latency_ms": 103.3
+    },
+    "model_size": {
+      "fp32_MB": 15.3,
+      "int8_MB_est": 3.82
+    }
+  },
+  "xception": {
+    "display": "Xception",
+    "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_honest\\xception\\seed_42\\best_model.pt",
+    "parameters": {
+      "total": 24924658,
+      "total_M": 24.925,
+      "groups": {
+        "backbone": 24905170,
+        "stem": 19488
+      }
+    },
+    "flops": {
+      "flops_G": 40.431,
+      "params_from_thop_M": 24.92,
+      "error": null,
+      "input_shape": [
+        1,
+        8,
+        3,
+        224,
+        224
+      ]
+    },
+    "speed": {
+      "gpu_fps": 55.7,
+      "gpu_latency_ms": 17.94,
+      "cpu_fps": 3.15,
+      "cpu_latency_ms": 317.0
+    },
+    "model_size": {
+      "fp32_MB": 95.08,
+      "int8_MB_est": 23.77
+    }
+  },
+  "mesonet": {
+    "display": "MesoNet",
+    "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_honest\\mesonet\\seed_42\\best_model.pt",
+    "parameters": {
+      "total": 274986,
+      "total_M": 0.275,
+      "groups": {
+        "other": 274986
+      }
+    },
+    "flops": {
+      "flops_G": 1.408,
+      "params_from_thop_M": 0.275,
+      "error": null,
+      "input_shape": [
+        1,
+        8,
+        3,
+        224,
+        224
+      ]
+    },
+    "speed": {
+      "gpu_fps": 305.4,
+      "gpu_latency_ms": 3.27,
+      "cpu_fps": 55.81,
+      "cpu_latency_ms": 17.9
+    },
+    "model_size": {
+      "fp32_MB": 1.05,
+      "int8_MB_est": 0.26
+    }
+  },
+  "hardware": {
+    "platform": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch": "2.5.1+cu121",
+    "timestamp": "2026-08-28T06:04:07",
+    "note": "FPS 为 batch=1、8 帧输入、独占 GPU 下测量"
+  }
+}

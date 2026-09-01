@@ -1,0 +1,29 @@
+{
+  "dataset": "celebdf",
+  "split": "test",
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\checkpoints_v6/best_model_joint_celebdf.pt",
+  "checkpoint_epoch": 8,
+  "config_path": "configs/joint_train.yaml",
+  "timestamp": "2026-06-28T12:18:23",
+  "used_ema": true,
+  "threshold_source": "val",
+  "threshold": 0.9316986799240112,
+  "auc": 0.8370861566172055,
+  "accuracy": 0.7779623477297896,
+  "f1": 0.8712956028672302,
+  "ap": 0.9886944968063491,
+  "eer": 0.20786516853932585,
+  "tpr_at_fpr_1": 0.0011450381679389313,
+  "tpr_at_fpr_01": 0.0003816793893129771,
+  "num_samples": 5418,
+  "confusion_matrix": {
+    "tp": 4072,
+    "tn": 143,
+    "fp": 35,
+    "fn": 1168
+  },
+  "val_threshold_info": {
+    "val_num_samples": 9734,
+    "val_auc": 0.8555169465174131
+  }
+}

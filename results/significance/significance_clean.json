@@ -1,0 +1,98 @@
+{
+  "protocol": "paired bootstrap n=10000, seed=2024, same test sample order (uint8 cache); z-test = bootstrap-variance paired z",
+  "n_test_samples": 5418,
+  "n_pairs": 6,
+  "timestamp": "2026-08-29T14:50:30",
+  "results": [
+    {
+      "pair": "car vs efficientnet_b0",
+      "desc": "CAR-v3 vs EfficientNet-B0 (same param tier)",
+      "auc_a": 0.8675,
+      "auc_b": 0.8957,
+      "delta_auc": -0.0283,
+      "bootstrap_p": 0.0076,
+      "bootstrap_ci95": [
+        -0.0494,
+        -0.0074
+      ],
+      "z_test_p": 0.007993,
+      "significant_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "pair": "car vs xception",
+      "desc": "CAR-v3 vs Xception (5.2M vs 24.9M)",
+      "auc_a": 0.8675,
+      "auc_b": 0.9223,
+      "delta_auc": -0.0548,
+      "bootstrap_p": 0.0001,
+      "bootstrap_ci95": [
+        -0.0767,
+        -0.0337
+      ],
+      "z_test_p": 1e-06,
+      "significant_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "pair": "car vs xception_qaug",
+      "desc": "CAR-v3 vs Xception+QAug (strongest robust baseline)",
+      "auc_a": 0.8675,
+      "auc_b": 0.9207,
+      "delta_auc": -0.0532,
+      "bootstrap_p": 0.0001,
+      "bootstrap_ci95": [
+        -0.0744,
+        -0.0326
+      ],
+      "z_test_p": 1e-06,
+      "significant_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "pair": "car vs mesonet",
+      "desc": "CAR-v3 vs MesoNet",
+      "auc_a": 0.8675,
+      "auc_b": 0.8871,
+      "delta_auc": -0.0196,
+      "bootstrap_p": 0.035,
+      "bootstrap_ci95": [
+        -0.0379,
+        -0.0014
+      ],
+      "z_test_p": 0.034551,
+      "significant_0.05": true,
+      "significant_bonferroni": false
+    },
+    {
+      "pair": "car_s43 vs efficientnet_b0",
+      "desc": "CAR-v3 s43 vs B0 (seed robustness)",
+      "auc_a": 0.8542,
+      "auc_b": 0.8957,
+      "delta_auc": -0.0416,
+      "bootstrap_p": 0.0002,
+      "bootstrap_ci95": [
+        -0.0595,
+        -0.0236
+      ],
+      "z_test_p": 6e-06,
+      "significant_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "pair": "car_s44 vs efficientnet_b0",
+      "desc": "CAR-v3 s44 vs B0 (seed robustness)",
+      "auc_a": 0.8729,
+      "auc_b": 0.8957,
+      "delta_auc": -0.0229,
+      "bootstrap_p": 0.0122,
+      "bootstrap_ci95": [
+        -0.0409,
+        -0.0054
+      ],
+      "z_test_p": 0.011934,
+      "significant_0.05": true,
+      "significant_bonferroni": false
+    }
+  ]
+}

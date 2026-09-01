@@ -1,0 +1,52 @@
+{
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\final_car_v3\\checkpoints\\best_model.pt",
+  "protocol": "full test set 5418, uint8 cache, threshold-free metrics (AUC/AP)",
+  "baseline_auc": 0.8674854189896217,
+  "results": {
+    "Full CAR-v3": {
+      "mode": "full",
+      "auc": 0.8674854189896217,
+      "ap": 0.9948129206723052
+    },
+    "-motion": {
+      "mode": "drop:0",
+      "auc": 0.8630156960288189,
+      "ap": 0.9937004210405497
+    },
+    "-temporal": {
+      "mode": "drop:1",
+      "auc": 0.8628382579981131,
+      "ap": 0.994655772186139
+    },
+    "-spectral": {
+      "mode": "drop:2",
+      "auc": 0.8738613946307574,
+      "ap": 0.9951323283020876
+    },
+    "-boundary": {
+      "mode": "drop:3",
+      "auc": 0.8049629041941847,
+      "ap": 0.9895751125853368
+    },
+    "Uniform gating (1/4)": {
+      "mode": "uniform",
+      "auc": 0.8593929582296939,
+      "ap": 0.9943457147691236
+    },
+    "Only spectral": {
+      "mode": "only:2",
+      "auc": 0.717220602109958,
+      "ap": 0.9858708716252982
+    }
+  },
+  "delta": {
+    "Full CAR-v3": 0.0,
+    "-motion": -0.0044697229608028355,
+    "-temporal": -0.0046471609915086365,
+    "-spectral": 0.006375975641135678,
+    "-boundary": -0.06252251479543702,
+    "Uniform gating (1/4)": -0.008092460759927866,
+    "Only spectral": -0.15026481687966375
+  },
+  "timestamp": "2026-08-28T06:03:12"
+}

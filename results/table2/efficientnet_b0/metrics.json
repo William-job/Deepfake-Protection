@@ -1,0 +1,32 @@
+{
+  "model": "efficientnet_b0",
+  "display_name": "EfficientNet-B0",
+  "params": 4010110,
+  "training_data": "Celeb-DF++ only",
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baselines\\efficientnet_b0\\best_model.pt",
+  "checkpoint_epoch": 2,
+  "checkpoint_val_auc": 0.9450470304726368,
+  "used_ema": false,
+  "threshold_source": "val",
+  "scoring": "softmax",
+  "num_samples": 5418,
+  "val_threshold_info": {
+    "val_num_samples": 9734,
+    "val_auc": 0.9450816231343284
+  },
+  "confusion_matrix": {
+    "tp": 4302,
+    "tn": 163,
+    "fp": 15,
+    "fn": 938
+  },
+  "timestamp": "2026-07-14T18:48:52",
+  "auc": 0.9432444892357836,
+  "accuracy": 0.8241048357327427,
+  "f1": 0.9002825154337135,
+  "ap": 0.9979415101974123,
+  "eer": 0.1348314606741573,
+  "tpr_at_fpr_1": 0.7236641221374046,
+  "tpr_at_fpr_01": 0.6591603053435114,
+  "threshold": 0.9941237568855286
+}

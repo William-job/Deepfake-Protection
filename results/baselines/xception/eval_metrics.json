@@ -1,0 +1,32 @@
+{
+  "model": "xception",
+  "display_name": "Xception",
+  "params": 24924658,
+  "training_data": "Celeb-DF++ only",
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baselines\\xception\\best_model.pt",
+  "checkpoint_epoch": 12,
+  "checkpoint_val_auc": 0.949325637437811,
+  "used_ema": false,
+  "threshold_source": "val",
+  "scoring": "softmax",
+  "num_samples": 5418,
+  "val_threshold_info": {
+    "val_num_samples": 9734,
+    "val_auc": 0.9490558924129353
+  },
+  "confusion_matrix": {
+    "tp": 4705,
+    "tn": 164,
+    "fp": 14,
+    "fn": 535
+  },
+  "timestamp": "2026-07-14T20:55:39",
+  "auc": 0.9643789132858736,
+  "accuracy": 0.8986710963455149,
+  "f1": 0.9448739833316598,
+  "ap": 0.9987166907477845,
+  "eer": 0.0898876404494382,
+  "tpr_at_fpr_1": 0.6219465648854962,
+  "tpr_at_fpr_01": 0.5541984732824428,
+  "threshold": 0.9832701683044434
+}

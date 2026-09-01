@@ -1,0 +1,16 @@
+{
+  "checkpoint": "results/final_car_v2/checkpoints/best_model.pt",
+  "dataset": "FaceForensics++ c23",
+  "train_dataset": "Celeb-DF++",
+  "overall": {
+    "accuracy": 0.6857142857142857,
+    "auc": 0.5259183673469388,
+    "ap": 0.8118713700539107,
+    "f1": 0.7970479704797048,
+    "threshold": 0.726371705532074,
+    "eer": 0.4857142857142857,
+    "tpr_at_fpr_1": 0.010714285714285714,
+    "tpr_at_fpr_01": 0.010714285714285714
+  },
+  "by_method": {}
+}

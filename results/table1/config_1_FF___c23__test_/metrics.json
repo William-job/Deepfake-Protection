@@ -1,0 +1,30 @@
+{
+  "dataset": "ffpp",
+  "split": "test",
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\checkpoints_v6/best_model_joint_ffpp.pt",
+  "checkpoint_epoch": 12,
+  "config_path": "configs/joint_train.yaml",
+  "timestamp": "2026-06-28T12:55:47",
+  "used_ema": true,
+  "threshold_source": "val",
+  "threshold": 0.0680808573961258,
+  "auc": 0.9239795918367347,
+  "accuracy": 0.8657142857142858,
+  "f1": 0.9111531190926276,
+  "ap": 0.9789475900056233,
+  "eer": 0.12857142857142856,
+  "tpr_at_fpr_1": 0.22142857142857142,
+  "tpr_at_fpr_01": 0.22142857142857142,
+  "num_samples": 350,
+  "confusion_matrix": {
+    "tp": 241,
+    "tn": 62,
+    "fp": 8,
+    "fn": 39
+  },
+  "compression": "c23",
+  "val_threshold_info": {
+    "val_num_samples": 350,
+    "val_auc": 0.9135714285714286
+  }
+}

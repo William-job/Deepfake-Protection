@@ -1,0 +1,50 @@
+{
+  "model": "efficientnet_b0_qaug",
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_qaug\\efficientnet_b0\\last_model.pt",
+  "threshold": 0.5786653757095337,
+  "used_ema": false,
+  "num_samples": 5418,
+  "degradation": "downscale(INTER_AREA) + MPEG-4 ASP(mp4v) roundtrip + upscale(INTER_LINEAR)",
+  "clean_auc_ref": 0.8849933527746805,
+  "timestamp": "2026-08-29T17:17:46",
+  "transcode_scale=1.0": {
+    "auc": 0.8704466506561455,
+    "accuracy": 0.7593207825765965,
+    "f1": 0.859027027027027,
+    "ap": 0.9950559233019477,
+    "eer": 0.2247191011235955,
+    "tpr_at_fpr_1": 0.6244274809160305,
+    "tpr_at_fpr_01": 0.6062977099236642,
+    "threshold": 0.5786653757095337
+  },
+  "transcode_scale=0.75": {
+    "auc": 0.8521914400892014,
+    "accuracy": 0.8226282761166482,
+    "f1": 0.9003835389240178,
+    "ap": 0.994352709487119,
+    "eer": 0.23595505617977527,
+    "tpr_at_fpr_1": 0.617175572519084,
+    "tpr_at_fpr_01": 0.5948473282442748,
+    "threshold": 0.5786653757095337
+  },
+  "transcode_scale=0.5": {
+    "auc": 0.8438588215112789,
+    "accuracy": 0.8318567737172389,
+    "f1": 0.9063431685000514,
+    "ap": 0.9940109809085225,
+    "eer": 0.25280898876404495,
+    "tpr_at_fpr_1": 0.6164122137404581,
+    "tpr_at_fpr_01": 0.5984732824427481,
+    "threshold": 0.5786653757095337
+  },
+  "transcode_scale=0.25": {
+    "auc": 0.8346802899047947,
+    "accuracy": 0.8229974160206718,
+    "f1": 0.9009604461427244,
+    "ap": 0.993654368239353,
+    "eer": 0.25842696629213485,
+    "tpr_at_fpr_1": 0.5925572519083969,
+    "tpr_at_fpr_01": 0.5675572519083969,
+    "threshold": 0.5786653757095337
+  }
+}

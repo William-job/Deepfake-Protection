@@ -1,0 +1,50 @@
+{
+  "model": "efficientnet_b0",
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_honest\\efficientnet_b0\\seed_42\\best_model.pt",
+  "threshold": 0.8852070569992065,
+  "used_ema": false,
+  "num_samples": 5418,
+  "degradation": "downscale(INTER_AREA) + MPEG-4 ASP(mp4v) roundtrip + upscale(INTER_LINEAR)",
+  "clean_auc_ref": 0.8957468479286388,
+  "timestamp": "2026-08-29T17:08:05",
+  "transcode_scale=1.0": {
+    "auc": 0.8786838493867399,
+    "accuracy": 0.7500922849760059,
+    "f1": 0.8526338702655638,
+    "ap": 0.9953694580653385,
+    "eer": 0.21348314606741572,
+    "tpr_at_fpr_1": 0.6131679389312977,
+    "tpr_at_fpr_01": 0.5975190839694656,
+    "threshold": 0.8852070569992065
+  },
+  "transcode_scale=0.75": {
+    "auc": 0.8597403293592933,
+    "accuracy": 0.7552602436323367,
+    "f1": 0.8564313555651797,
+    "ap": 0.994647487250706,
+    "eer": 0.23595505617977527,
+    "tpr_at_fpr_1": 0.6194656488549618,
+    "tpr_at_fpr_01": 0.6047709923664122,
+    "threshold": 0.8852070569992065
+  },
+  "transcode_scale=0.5": {
+    "auc": 0.8436851359464792,
+    "accuracy": 0.7205610926541159,
+    "f1": 0.8323366555924695,
+    "ap": 0.9940516757669957,
+    "eer": 0.24157303370786518,
+    "tpr_at_fpr_1": 0.6188931297709923,
+    "tpr_at_fpr_01": 0.6083969465648855,
+    "threshold": 0.8852070569992065
+  },
+  "transcode_scale=0.25": {
+    "auc": 0.8264409469079681,
+    "accuracy": 0.7469545957918051,
+    "f1": 0.8511239005320882,
+    "ap": 0.9932893269746339,
+    "eer": 0.2640449438202247,
+    "tpr_at_fpr_1": 0.5688931297709924,
+    "tpr_at_fpr_01": 0.516030534351145,
+    "threshold": 0.8852070569992065
+  }
+}

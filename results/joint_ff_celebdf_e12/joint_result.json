@@ -1,0 +1,9 @@
+{
+  "pretrained": "results/final_car_v3/checkpoints/best_model.pt",
+  "base_ff": 0.51,
+  "base_celeb": 0.8537291580166517,
+  "best_ff": 0.814795918367347,
+  "best_epoch": 10,
+  "last_epoch": 11,
+  "timestamp": "2026-08-29T11:49:59"
+}

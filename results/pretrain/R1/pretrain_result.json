@@ -1,0 +1,31 @@
+{
+  "mode": "R1",
+  "seed": 42,
+  "level2": {
+    "motion": {
+      "acc": 0.5,
+      "auc": 0.5,
+      "batches": 30
+    },
+    "temporal": {
+      "acc": 0.625,
+      "auc": 0.6719,
+      "batches": 30
+    },
+    "spectral": {
+      "acc": 0.625,
+      "auc": 0.7344,
+      "batches": 30
+    },
+    "boundary": {
+      "acc": 0.5625,
+      "auc": 0.6719,
+      "batches": 30
+    }
+  },
+  "level3": {
+    "router_kl": 0.8177,
+    "batches": 30
+  },
+  "val_auc": 0.6152
+}

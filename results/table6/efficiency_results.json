@@ -1,0 +1,68 @@
+{
+  "table": "Table 6: Efficiency Analysis",
+  "checkpoint": "checkpoints_v6/best_model_joint_celebdf.pt",
+  "parameters": {
+    "total": 7776535,
+    "trainable": 7776535,
+    "non_trainable": 0,
+    "total_M": 7.7765,
+    "groups": {
+      "stem": 3595388,
+      "temporal_head": 44928,
+      "flow_head": 484096,
+      "frequency_head": 28928,
+      "blending_head": 336384,
+      "experts": 2878905,
+      "fusion": 405060,
+      "gating": 29,
+      "difficulty_estimator": 1793,
+      "head_norms": 1024,
+      "preprocessor": 0,
+      "other": 0
+    }
+  },
+  "flops": {
+    "flops": 3746563460.0,
+    "flops_G": 3.7466,
+    "params_from_thop": 7598818.0,
+    "thop_version": "2.0.18",
+    "error": null,
+    "input_shape": [
+      1,
+      8,
+      3,
+      224,
+      224
+    ]
+  },
+  "fps": {
+    "gpu": {
+      "fps": 61.611827203249064,
+      "latency_ms": 16.230649948120117,
+      "runs": 1000
+    },
+    "cpu": {
+      "fps": 7.435969973694282,
+      "latency_ms": 134.48144674301147,
+      "runs": 100
+    }
+  },
+  "model_size": {
+    "fp32_bytes": 31642529,
+    "fp32_MB": 30.1767,
+    "int8_bytes": 28448055,
+    "int8_MB": 27.1302,
+    "int8_error": null,
+    "compression_ratio": 1.1123
+  },
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "python": "3.12.10",
+    "torch": "2.5.1+cu121",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_total_memory_gb": 8.0
+  },
+  "timestamp": "2026-06-28 12:58:10"
+}

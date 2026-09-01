@@ -1,0 +1,303 @@
+{
+  "per_manipulation": {
+    "car": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.9509
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.6501
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.992
+      }
+    },
+    "car_s43": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.9478
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.6094
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.9946
+      }
+    },
+    "car_s44": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.9559
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.6628
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.9916
+      }
+    },
+    "mesonet": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.9592
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.6945
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.9984
+      }
+    },
+    "efficientnet_b0": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.9559
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.7375
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.9867
+      }
+    },
+    "efficientnet_b0_qaug": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.9499
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.7067
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.9895
+      }
+    },
+    "xception": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.966
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.7963
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.9974
+      }
+    },
+    "xception_qaug": {
+      "n_real": 178,
+      "FaceReenact": {
+        "n": 1400,
+        "auc": 0.9625
+      },
+      "FaceSwap": {
+        "n": 1740,
+        "auc": 0.7919
+      },
+      "TalkingFace": {
+        "n": 2100,
+        "auc": 0.9996
+      }
+    }
+  },
+  "tpr": {
+    "car": {
+      "clean": {
+        "tpr@fpr1%": 0.4603,
+        "tpr@fpr0.1%": 0.2914
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.5334,
+        "tpr@fpr0.1%": 0.5294
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.4429,
+        "tpr@fpr0.1%": 0.2977
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.5048,
+        "tpr@fpr0.1%": 0.4143
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.4821,
+        "tpr@fpr0.1%": 0.3319
+      }
+    },
+    "car_s43": {
+      "clean": {
+        "tpr@fpr1%": 0.5399,
+        "tpr@fpr0.1%": 0.534
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.521,
+        "tpr@fpr0.1%": 0.5168
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.3901,
+        "tpr@fpr0.1%": 0.0298
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.5758,
+        "tpr@fpr0.1%": 0.1521
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.5826,
+        "tpr@fpr0.1%": 0.5271
+      }
+    },
+    "car_s44": {
+      "clean": {
+        "tpr@fpr1%": 0.6113,
+        "tpr@fpr0.1%": 0.609
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.6004,
+        "tpr@fpr0.1%": 0.5769
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.5328,
+        "tpr@fpr0.1%": 0.4947
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.6267,
+        "tpr@fpr0.1%": 0.6046
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.6149,
+        "tpr@fpr0.1%": 0.6149
+      }
+    },
+    "mesonet": {
+      "clean": {
+        "tpr@fpr1%": 0.6351,
+        "tpr@fpr0.1%": 0.6351
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.0092,
+        "tpr@fpr0.1%": 0.0004
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.5735,
+        "tpr@fpr0.1%": 0.5532
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.6395,
+        "tpr@fpr0.1%": 0.6332
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.6336,
+        "tpr@fpr0.1%": 0.6323
+      }
+    },
+    "efficientnet_b0": {
+      "clean": {
+        "tpr@fpr1%": 0.608,
+        "tpr@fpr0.1%": 0.6046
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.0,
+        "tpr@fpr0.1%": 0.0
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.5899,
+        "tpr@fpr0.1%": 0.5807
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.6042,
+        "tpr@fpr0.1%": 0.6021
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.5935,
+        "tpr@fpr0.1%": 0.5933
+      }
+    },
+    "efficientnet_b0_qaug": {
+      "clean": {
+        "tpr@fpr1%": 0.6183,
+        "tpr@fpr0.1%": 0.6179
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.5624,
+        "tpr@fpr0.1%": 0.5529
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.5996,
+        "tpr@fpr0.1%": 0.5968
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.6044,
+        "tpr@fpr0.1%": 0.6027
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.6015,
+        "tpr@fpr0.1%": 0.5975
+      }
+    },
+    "xception": {
+      "clean": {
+        "tpr@fpr1%": 0.6107,
+        "tpr@fpr0.1%": 0.6055
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.5059,
+        "tpr@fpr0.1%": 0.4987
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.6017,
+        "tpr@fpr0.1%": 0.5115
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.6273,
+        "tpr@fpr0.1%": 0.6265
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.6447,
+        "tpr@fpr0.1%": 0.6019
+      }
+    },
+    "xception_qaug": {
+      "clean": {
+        "tpr@fpr1%": 0.6279,
+        "tpr@fpr0.1%": 0.621
+      },
+      "noise_std=0.05": {
+        "tpr@fpr1%": 0.6305,
+        "tpr@fpr0.1%": 0.6296
+      },
+      "blur_kernel=7": {
+        "tpr@fpr1%": 0.6183,
+        "tpr@fpr0.1%": 0.5836
+      },
+      "jpeg_quality=30": {
+        "tpr@fpr1%": 0.6303,
+        "tpr@fpr0.1%": 0.6286
+      },
+      "brightness_factor=1.2": {
+        "tpr@fpr1%": 0.6323,
+        "tpr@fpr0.1%": 0.6206
+      }
+    }
+  },
+  "timestamp": "2026-09-01T10:41:21"
+}

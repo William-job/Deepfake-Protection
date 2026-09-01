@@ -1,0 +1,29 @@
+{
+  "model": "car",
+  "display_name": "CAR",
+  "seed": 42,
+  "checkpoint": "results/final_car/checkpoints/best_model.pt",
+  "threshold_source": "val",
+  "scoring": "sigmoid",
+  "used_ema": true,
+  "num_samples": 5418,
+  "val_threshold_info": {
+    "val_num_samples": 9734,
+    "val_auc": 0.8549121579601989
+  },
+  "confusion_matrix": {
+    "tp": 3313,
+    "tn": 176,
+    "fp": 2,
+    "fn": 1927
+  },
+  "timestamp": "2026-08-27T09:32:23",
+  "auc": 0.8860987220173256,
+  "accuracy": 0.6439645625692137,
+  "f1": 0.7745178258328463,
+  "ap": 0.9956794026199063,
+  "eer": 0.21910112359550563,
+  "tpr_at_fpr_1": 0.6314885496183206,
+  "tpr_at_fpr_01": 0.6265267175572519,
+  "threshold": 0.5441374778747559
+}

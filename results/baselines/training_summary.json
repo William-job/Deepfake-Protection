@@ -1,0 +1,47 @@
+{
+  "overall_start_time": "2026-07-13T08:23:21.816209",
+  "overall_end_time": null,
+  "total_duration_seconds": null,
+  "last_updated": "2026-07-13T08:23:21.827897",
+  "total_models": 4,
+  "completed": 0,
+  "failed": 3,
+  "models": [
+    {
+      "model": "mesonet",
+      "start_time": "2026-07-13T08:23:21.816209",
+      "end_time": "2026-07-13T08:23:21.816209",
+      "duration_seconds": 0,
+      "status": "skipped",
+      "return_code": 0,
+      "error": null,
+      "resumed": false,
+      "resumed_from_epoch": null,
+      "skip_reason": "already_completed"
+    },
+    {
+      "model": "efficientnet_b0",
+      "start_time": "2026-07-13T08:23:21.816209",
+      "end_time": "2026-07-13T08:23:21.817203",
+      "duration_seconds": 0,
+      "status": "skipped",
+      "return_code": 0,
+      "error": null,
+      "resumed": false,
+      "resumed_from_epoch": null,
+      "skip_reason": "already_completed"
+    },
+    {
+      "model": "efficientnet_b3",
+      "start_time": "2026-07-13T08:23:21.827897",
+      "end_time": "2026-07-13T08:23:21.827897",
+      "duration_seconds": 0,
+      "status": "skipped",
+      "return_code": 0,
+      "error": null,
+      "resumed": false,
+      "resumed_from_epoch": null,
+      "skip_reason": "already_completed"
+    }
+  ]
+}

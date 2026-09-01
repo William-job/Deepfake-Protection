@@ -1,0 +1,58 @@
+{
+  "car": {
+    "transcode_scale=1.0": 0.8616980444291963,
+    "transcode_scale=0.75": 0.8486512565400121,
+    "transcode_scale=0.5": 0.8369424907796552,
+    "transcode_scale=0.25": 0.8322722789261514,
+    "clean_auc_ref": 0.8674854189896217
+  },
+  "car_s43": {
+    "transcode_scale=1.0": 0.8501254395745775,
+    "transcode_scale=0.75": 0.8525302341538726,
+    "transcode_scale=0.5": 0.8483542756668667,
+    "transcode_scale=0.25": 0.8390626340166396,
+    "clean_auc_ref": 0.8541888240843984
+  },
+  "car_s44": {
+    "transcode_scale=1.0": 0.8667853160648427,
+    "transcode_scale=0.75": 0.8671734282528519,
+    "transcode_scale=0.5": 0.8674918517883181,
+    "transcode_scale=0.25": 0.8529933956600052,
+    "clean_auc_ref": 0.8728621665666009
+  },
+  "efficientnet_b0": {
+    "transcode_scale=1.0": 0.8786838493867399,
+    "transcode_scale=0.75": 0.8597403293592933,
+    "transcode_scale=0.5": 0.8436851359464792,
+    "transcode_scale=0.25": 0.8264409469079681,
+    "clean_auc_ref": 0.8957468479286388
+  },
+  "efficientnet_b0_qaug": {
+    "transcode_scale=1.0": 0.8704466506561455,
+    "transcode_scale=0.75": 0.8521914400892014,
+    "transcode_scale=0.5": 0.8438588215112789,
+    "transcode_scale=0.25": 0.8346802899047947,
+    "clean_auc_ref": 0.8849933527746805
+  },
+  "xception": {
+    "transcode_scale=1.0": 0.9043131915258598,
+    "transcode_scale=0.75": 0.8780684449781285,
+    "transcode_scale=0.5": 0.8748102324384597,
+    "transcode_scale=0.25": 0.8522343254138434,
+    "clean_auc_ref": 0.9222521228235698
+  },
+  "xception_qaug": {
+    "transcode_scale=1.0": 0.9084902221459815,
+    "transcode_scale=0.75": 0.8882783686422505,
+    "transcode_scale=0.5": 0.8833111759156016,
+    "transcode_scale=0.25": 0.8680879578008406,
+    "clean_auc_ref": 0.9207200446007376
+  },
+  "mesonet": {
+    "transcode_scale=1.0": 0.8871108156788745,
+    "transcode_scale=0.75": 0.8807734368299168,
+    "transcode_scale=0.5": 0.8699792006175486,
+    "transcode_scale=0.25": 0.8350147954370014,
+    "clean_auc_ref": 0.8870529204906081
+  }
+}

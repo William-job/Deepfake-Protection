@@ -1,0 +1,32 @@
+{
+  "model": "mesonet",
+  "display_name": "MesoNet",
+  "params": 274986,
+  "training_data": "Celeb-DF++ only",
+  "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baselines\\mesonet\\best_model.pt",
+  "checkpoint_epoch": 12,
+  "checkpoint_val_auc": 0.8701920087064676,
+  "used_ema": false,
+  "threshold_source": "val",
+  "scoring": "softmax",
+  "num_samples": 5418,
+  "val_threshold_info": {
+    "val_num_samples": 9734,
+    "val_auc": 0.8702157182835821
+  },
+  "confusion_matrix": {
+    "tp": 3927,
+    "tn": 142,
+    "fp": 36,
+    "fn": 1313
+  },
+  "timestamp": "2026-07-14T19:36:51",
+  "auc": 0.8653223904279955,
+  "accuracy": 0.751015134736065,
+  "f1": 0.8534173639030751,
+  "ap": 0.9948504361990125,
+  "eer": 0.24157303370786518,
+  "tpr_at_fpr_1": 0.6293893129770992,
+  "tpr_at_fpr_01": 0.6009541984732825,
+  "threshold": 0.9794259667396545
+}

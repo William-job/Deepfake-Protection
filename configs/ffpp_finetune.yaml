@@ -1,0 +1,84 @@
+# FF++ c23 微调配置（基于 v5 Celeb-DF++ 预训练模型）
+# 与 configs/default.yaml 的关键差异：
+#   - data.dataset: ffpp
+#   - data.compression: c23
+#   - data.batch_size: 16（微调用较小 batch）
+#   - data.num_workers: 4
+#   - training.lr / lr_backbone: 1.0e-5（微调学习率）
+#   - training.epochs: 10
+#   - training.warmup_epochs: 0（微调不需要 warmup）
+#   - training.weight_decay: 0.01
+#   - training.ema_enabled: true / ema_decay: 0.999
+#   - logging.log_dir: ./logs/ffpp_finetune
+#   - logging.checkpoint_dir: ./checkpoints_v6
+# 其它参数（model 结构、curriculum、qat 等）与 default.yaml 保持一致
+
+model:
+  stem: efficientnet-b0
+  latent_dim: 128
+  latent_k: 4
+  num_heads: 4
+  num_transformer_layers: 2
+  top_k: 2
+  difficulty_hidden_dim: 128
+  difficulty_use_pairwise_cos: true
+  difficulty_use_z_norm: true
+
+data:
+  dataset: ffpp
+  data_root: "D:/Celeb-DF++/Celeb-DF-v3"
+  ff_root: "D:/FaceForensics++"
+  compression: c23
+  num_frames: 8
+  frame_stride: 2
+  image_size: 224
+  batch_size: 16
+  num_workers: 4
+  val_ratio: 0.2
+
+training:
+  epochs: 10
+  lr: 1.0e-5
+  lr_backbone: 1.0e-5
+  weight_decay: 0.01
+  aux_loss_weight: 0.1
+  load_balance_weight: 0.05
+  difficulty_loss_weight: 0.05
+  min_expert_weight: 0.15
+  min_expert_threshold: 0.08
+  label_smoothing: 0.10
+  freeze_stem: true
+  temperature_start: 1.0
+  temperature_end: 0.1
+  difficulty_temperature_min: 0.2
+  difficulty_temperature_max: 2.0
+  difficulty_use_head_std: true
+  gating_difficulty_conditioned: true
+  temperature_anneal_epochs: 20
+  warmup_epochs: 0
+  early_stopping_patience: 28
+  grad_clip: 1.0
+  seed: 42
+  use_amp: true
+  qat_min_bit: 6
+  qat_max_bit: 8
+  qat_noise_scale: 0.015
+  cutmix_p: 0.15
+  cutmix_alpha: 1.0
+  ema_decay: 0.999
+  ema_enabled: true
+
+logging:
+  log_dir: ./logs/ffpp_finetune
+  checkpoint_dir: ./checkpoints_v6
+  log_interval: 20
+  eval_interval: 1
+  save_interval: 1
+
+quantization:
+  enabled: false
+  calibration_samples: 100
+  bit_widths: [4, 8, 16]
+
+system:
+  seed: 42

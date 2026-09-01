@@ -1,0 +1,58 @@
+{
+  "condition": "noise_std=0.05, seed=2024, full test 5418, same degradation order",
+  "timestamp": "2026-08-29T16:00:21",
+  "results": [
+    {
+      "pair": "car vs efficientnet_b0",
+      "desc": "CAR-v3 vs B0 @ sigma=0.05",
+      "auc_a": 0.8472,
+      "auc_b": 0.5219,
+      "delta_auc": 0.3253,
+      "bootstrap_p": 0.0001,
+      "bootstrap_ci95": [
+        0.2847,
+        0.3659
+      ],
+      "significant_0.05": true
+    },
+    {
+      "pair": "car vs efficientnet_b0_qaug",
+      "desc": "CAR-v3 vs B0+QAug @ sigma=0.05",
+      "auc_a": 0.8472,
+      "auc_b": 0.8303,
+      "delta_auc": 0.0169,
+      "bootstrap_p": 0.1336,
+      "bootstrap_ci95": [
+        -0.0053,
+        0.0395
+      ],
+      "significant_0.05": false
+    },
+    {
+      "pair": "car_s43 vs efficientnet_b0_qaug",
+      "desc": "CAR-v3 s43 vs B0+QAug @ sigma=0.05",
+      "auc_a": 0.8623,
+      "auc_b": 0.8303,
+      "delta_auc": 0.0319,
+      "bootstrap_p": 0.0018,
+      "bootstrap_ci95": [
+        0.0116,
+        0.0527
+      ],
+      "significant_0.05": true
+    },
+    {
+      "pair": "car_s44 vs efficientnet_b0_qaug",
+      "desc": "CAR-v3 s44 vs B0+QAug @ sigma=0.05",
+      "auc_a": 0.8714,
+      "auc_b": 0.8303,
+      "delta_auc": 0.0411,
+      "bootstrap_p": 0.0002,
+      "bootstrap_ci95": [
+        0.0224,
+        0.06
+      ],
+      "significant_0.05": true
+    }
+  ]
+}

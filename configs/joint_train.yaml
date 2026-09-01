@@ -1,0 +1,98 @@
+# 联合训练配置（方案 C）
+# 基于 configs/default.yaml 修改，关键差异（全部有理论依据，无含糊参数）：
+#   - data.dataset: joint（联合训练）
+#   - data.primary_dataset / secondary_dataset: 主辅数据集标识
+#   - data.compression: c23（FF++ 压缩等级）
+#   - data.sampling_strategy: weighted_balanced（事前平衡策略）
+#   - data.ffpp_sample_weight: 21.7（= 38934/1794，精确计算）
+#   - data.frame_stride: 1（更密集帧采样，与联合训练目标一致）
+#   - data.num_workers: 4
+#   - training.lr / lr_backbone: 5.0e-5（= 主训练 lr 3e-4 的 1/6，热启动标准值）
+#   - training.epochs: 15
+#   - training.warmup_epochs: 0（热启动不需要 warmup）
+#   - training.temperature_start / end: 0.3（固定温度，= v5 epoch 23 时的值，不退火）
+#   - training.temperature_anneal_epochs: 15（与 epochs 一致但 start=end 不退火）
+#   - training.qat_enabled: false（禁用 QAT，避免小数据集过拟合）
+#   - training.qat_noise_scale: 0.0
+#   - training.early_stopping_patience: 15（不提前停止）
+#   - logging.log_dir: ./logs/joint_train
+#   - logging.checkpoint_dir: ./checkpoints_v6
+# 模型架构及其它未列出参数与 default.yaml 保持一致
+
+model:
+  stem: efficientnet-b0
+  latent_dim: 128
+  latent_k: 4
+  num_heads: 4
+  num_transformer_layers: 2
+  top_k: 2
+  difficulty_hidden_dim: 128
+  difficulty_use_pairwise_cos: true
+  difficulty_use_z_norm: true
+
+data:
+  dataset: joint
+  primary_dataset: celebdf
+  secondary_dataset: ffpp
+  ff_root: "D:/FaceForensics++"
+  compression: c23
+  sampling_strategy: weighted_balanced
+  ffpp_sample_weight: 21.7
+  data_root: "D:/Celeb-DF++/Celeb-DF-v3"
+  batch_size: 8
+  num_workers: 4
+  num_frames: 8
+  frame_stride: 1
+  image_size: 224
+  val_ratio: 0.2
+
+training:
+  epochs: 15
+  lr: 5.0e-5
+  lr_backbone: 5.0e-5
+  weight_decay: 5.0e-4
+  aux_loss_weight: 0.1
+  load_balance_weight: 0.05
+  difficulty_loss_weight: 0.05
+  min_expert_weight: 0.15
+  min_expert_threshold: 0.08
+  label_smoothing: 0.10
+  freeze_stem: true
+  temperature_start: 0.3
+  temperature_end: 0.3
+  difficulty_temperature_min: 0.2
+  difficulty_temperature_max: 2.0
+  difficulty_use_head_std: true
+  gating_difficulty_conditioned: true
+  temperature_anneal_epochs: 15
+  warmup_epochs: 0
+  early_stopping_patience: 15
+  grad_clip: 1.0
+  seed: 42
+  use_amp: true
+  qat_enabled: false
+  qat_min_bit: 6
+  qat_max_bit: 8
+  qat_noise_scale: 0.0
+  cutmix_p: 0.15
+  cutmix_alpha: 1.0
+  ema_decay: 0.999
+  ema_enabled: true
+
+logging:
+  log_dir: ./logs/joint_train
+  checkpoint_dir: ./checkpoints_v6
+  tensorboard_dir: ./logs/joint_train/tensorboard
+  log_interval: 20
+  eval_interval: 1
+  save_interval: 1
+
+quantization:
+  enabled: false
+  calibration_samples: 100
+  bit_widths: [4, 8, 16]
+
+system:
+  seed: 42
+  device: cuda
+  use_amp: true

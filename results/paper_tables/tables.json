@@ -1,0 +1,662 @@
+{
+  "T1_main": {
+    "rows": [
+      {
+        "model": "CAR-v3 (ours)",
+        "metrics": {
+          "auc": 0.8674854189896217,
+          "accuracy": 0.6701734957548912,
+          "f1": 0.7949512335054504,
+          "ap": 0.9948129206723052,
+          "eer": 0.24157303370786518,
+          "tpr_at_fpr_1": 0.46030534351145036,
+          "tpr_at_fpr_01": 0.291412213740458,
+          "threshold": 0.634105920791626
+        },
+        "source": "results/robustness_honest/car.json#clean"
+      },
+      {
+        "model": "CAR-v2 (no noise-aug)",
+        "metrics": {
+          "model": "car",
+          "display_name": "CAR",
+          "seed": 42,
+          "checkpoint": "results/final_car_v2/checkpoints/best_model.pt",
+          "threshold_source": "val",
+          "scoring": "sigmoid",
+          "used_ema": false,
+          "num_samples": 5418,
+          "val_threshold_info": {
+            "val_num_samples": 9734,
+            "val_auc": 0.8680457089552238
+          },
+          "confusion_matrix": {
+            "tp": 3628,
+            "tn": 159,
+            "fp": 19,
+            "fn": 1612
+          },
+          "timestamp": "2026-08-27T16:42:51",
+          "auc": 0.883679989707522,
+          "accuracy": 0.6989664082687338,
+          "f1": 0.8164735006188815,
+          "ap": 0.9955469361182652,
+          "eer": 0.21348314606741572,
+          "tpr_at_fpr_1": 0.5646946564885497,
+          "tpr_at_fpr_01": 0.5576335877862595,
+          "threshold": 0.5083064436912537
+        },
+        "source": "results/final_car_v2/eval_metrics.json"
+      }
+    ]
+  },
+  "T2_robustness": {
+    "car": {
+      "clean": 0.8674854189896217,
+      "jpeg_quality=90": 0.8680171970151813,
+      "jpeg_quality=70": 0.8645107856591474,
+      "jpeg_quality=50": 0.8640074191611631,
+      "jpeg_quality=30": 0.8652157131829489,
+      "noise_std=0.01": 0.8772107384852904,
+      "noise_std=0.02": 0.8685221717128399,
+      "noise_std=0.05": 0.8472499785573376,
+      "blur_kernel=3": 0.8454873917145553,
+      "blur_kernel=5": 0.8375107213311606,
+      "blur_kernel=7": 0.8362209451925551,
+      "brightness_factor=1.2": 0.8648125911313149,
+      "brightness_factor=0.8": 0.8569956685822111
+    },
+    "efficientnet_b0": {
+      "clean": 0.8957468479286388,
+      "jpeg_quality=90": 0.8829166309288962,
+      "jpeg_quality=70": 0.8727871172484777,
+      "jpeg_quality=50": 0.8640020584955829,
+      "jpeg_quality=30": 0.849029719529977,
+      "noise_std=0.01": 0.8744778711724848,
+      "noise_std=0.02": 0.8273779912513938,
+      "noise_std=0.05": 0.5239133930868858,
+      "blur_kernel=3": 0.8754385024444634,
+      "blur_kernel=5": 0.8640964062097951,
+      "blur_kernel=7": 0.8544418474997857,
+      "brightness_factor=1.2": 0.8923653400806244,
+      "brightness_factor=0.8": 0.8996719272664895
+    },
+    "xception": {
+      "clean": 0.9222521228235698,
+      "jpeg_quality=90": 0.9100641135603398,
+      "jpeg_quality=70": 0.903030920319067,
+      "jpeg_quality=50": 0.895907667896046,
+      "jpeg_quality=30": 0.8920008148211682,
+      "noise_std=0.01": 0.9091860365382965,
+      "noise_std=0.02": 0.8946875804099836,
+      "noise_std=0.05": 0.8793196243245561,
+      "blur_kernel=3": 0.8921112445321212,
+      "blur_kernel=5": 0.8792317094090403,
+      "blur_kernel=7": 0.8727806844497813,
+      "brightness_factor=1.2": 0.9248252423020842,
+      "brightness_factor=0.8": 0.919737970666438
+    },
+    "mesonet": {
+      "clean": 0.8870529204906081,
+      "jpeg_quality=90": 0.8882129685221718,
+      "jpeg_quality=70": 0.8885667724504673,
+      "jpeg_quality=50": 0.8886128741744574,
+      "jpeg_quality=30": 0.8897804271378335,
+      "noise_std=0.01": 0.8871912256625784,
+      "noise_std=0.02": 0.8832447036624067,
+      "noise_std=0.05": 0.7607781542156273,
+      "blur_kernel=3": 0.8766896817908911,
+      "blur_kernel=5": 0.8633652114246504,
+      "blur_kernel=7": 0.8470752208594219,
+      "brightness_factor=1.2": 0.887768033279012,
+      "brightness_factor=0.8": 0.8851059267518656
+    },
+    "xception_qaug": {
+      "clean": 0.9207200446007376,
+      "jpeg_quality=90": 0.9150430997512652,
+      "jpeg_quality=70": 0.9092246333304743,
+      "jpeg_quality=50": 0.9036259541984732,
+      "jpeg_quality=30": 0.8994714383737885,
+      "noise_std=0.01": 0.9147729222060211,
+      "noise_std=0.02": 0.9091388626811905,
+      "noise_std=0.05": 0.8978375075049317,
+      "blur_kernel=3": 0.8935028733167509,
+      "blur_kernel=5": 0.8841431512136547,
+      "blur_kernel=7": 0.8772949009349,
+      "brightness_factor=1.2": 0.924773779912514,
+      "brightness_factor=0.8": 0.9153540183549189
+    }
+  },
+  "T2_note": "全量 test 5418、冻结 val 阈值、噪声 seed=2024（各模型同实现）",
+  "T3_ablation": {
+    "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\final_car_v3\\checkpoints\\best_model.pt",
+    "protocol": "full test set 5418, uint8 cache, threshold-free metrics (AUC/AP)",
+    "baseline_auc": 0.8674854189896217,
+    "results": {
+      "Full CAR-v3": {
+        "mode": "full",
+        "auc": 0.8674854189896217,
+        "ap": 0.9948129206723052
+      },
+      "-motion": {
+        "mode": "drop:0",
+        "auc": 0.8630156960288189,
+        "ap": 0.9937004210405497
+      },
+      "-temporal": {
+        "mode": "drop:1",
+        "auc": 0.8628382579981131,
+        "ap": 0.994655772186139
+      },
+      "-spectral": {
+        "mode": "drop:2",
+        "auc": 0.8738613946307574,
+        "ap": 0.9951323283020876
+      },
+      "-boundary": {
+        "mode": "drop:3",
+        "auc": 0.8049629041941847,
+        "ap": 0.9895751125853368
+      },
+      "Uniform gating (1/4)": {
+        "mode": "uniform",
+        "auc": 0.8593929582296939,
+        "ap": 0.9943457147691236
+      },
+      "Only spectral": {
+        "mode": "only:2",
+        "auc": 0.717220602109958,
+        "ap": 0.9858708716252982
+      }
+    },
+    "delta": {
+      "Full CAR-v3": 0.0,
+      "-motion": -0.0044697229608028355,
+      "-temporal": -0.0046471609915086365,
+      "-spectral": 0.006375975641135678,
+      "-boundary": -0.06252251479543702,
+      "Uniform gating (1/4)": -0.008092460759927866,
+      "Only spectral": -0.15026481687966375
+    },
+    "timestamp": "2026-08-28T06:03:12"
+  },
+  "T4_specialization": {
+    "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\final_car_v3\\checkpoints\\best_model.pt",
+    "num_samples": 1200,
+    "num_real": 178,
+    "num_fake": 1022,
+    "expert_order": [
+      "motion",
+      "temporal",
+      "spectral",
+      "boundary"
+    ],
+    "artifact_order": [
+      "temporal_jitter",
+      "motion_ghost",
+      "compression_art",
+      "boundary_seam"
+    ],
+    "artifact_to_expert": {
+      "temporal_jitter": "temporal",
+      "motion_ghost": "motion",
+      "compression_art": "spectral",
+      "boundary_seam": "boundary"
+    },
+    "response_matrix_all": [
+      [
+        0.4398956298828125,
+        0.679697573184967,
+        0.6176331639289856,
+        0.5531659722328186
+      ],
+      [
+        0.440698504447937,
+        0.68445885181427,
+        0.6178695559501648,
+        0.5529282093048096
+      ],
+      [
+        0.22707968950271606,
+        0.19980426132678986,
+        0.9035546779632568,
+        0.46766164898872375
+      ],
+      [
+        0.47907668352127075,
+        0.775345504283905,
+        0.654955267906189,
+        0.9880768656730652
+      ]
+    ],
+    "response_matrix_real": [
+      [
+        0.41043245792388916,
+        0.29300910234451294,
+        0.4726830720901489,
+        0.07086794078350067
+      ],
+      [
+        0.4110146760940552,
+        0.3002244234085083,
+        0.4733743965625763,
+        0.07073920220136642
+      ],
+      [
+        0.24167673289775848,
+        0.16651028394699097,
+        0.8870683312416077,
+        0.18339069187641144
+      ],
+      [
+        0.43522241711616516,
+        0.4581211805343628,
+        0.4570643901824951,
+        0.9741643071174622
+      ]
+    ],
+    "response_matrix_fake": [
+      [
+        0.44502758979797363,
+        0.7470464706420898,
+        0.6428790092468262,
+        0.6371670961380005
+      ],
+      [
+        0.44586849212646484,
+        0.7513803243637085,
+        0.6430357694625854,
+        0.6369102597236633
+      ],
+      [
+        0.22453732788562775,
+        0.2056029886007309,
+        0.9064257740974426,
+        0.5171728134155273
+      ],
+      [
+        0.4867149293422699,
+        0.830595850944519,
+        0.689421534538269,
+        0.9904999732971191
+      ]
+    ],
+    "response_matrix_delta": [
+      [
+        -0.0005814135074615479,
+        -0.006267666816711426,
+        1.7881393432617188e-07,
+        0.0
+      ],
+      [
+        0.00022146105766296387,
+        -0.0015063881874084473,
+        0.0002365708351135254,
+        -0.0002377629280090332
+      ],
+      [
+        -0.21339735388755798,
+        -0.4861609935760498,
+        0.28592169284820557,
+        -0.08550432324409485
+      ],
+      [
+        0.038599640130996704,
+        0.08938026428222656,
+        0.037322282791137695,
+        0.4349108934402466
+      ]
+    ],
+    "clean_response": [
+      0.44047704339027405,
+      0.6859652400016785,
+      0.6176329851150513,
+      0.5531659722328186
+    ],
+    "strong_probes": {
+      "note": "强剂量探针：把同族扰动铺满时间维（标准 ControlledSBI 探针仅扰动 1-2 帧，会被时间维均值池化稀释）。用于剂量响应验证，检验专家对 artifact 家族的真实响应能力。",
+      "rows": {
+        "temporal_shuffle": [
+          0.43880584836006165,
+          0.6731399297714233,
+          0.6176331043243408,
+          0.5531659722328186
+        ],
+        "motion_freeze": [
+          0.44139012694358826,
+          0.6922042369842529,
+          0.6160528063774109,
+          0.551662802696228
+        ]
+      },
+      "report": {
+        "temporal_shuffle": {
+          "expert": "temporal",
+          "row": [
+            0.43880584836006165,
+            0.6731399297714233,
+            0.6176331043243408,
+            0.5531659722328186
+          ],
+          "delta_vs_clean": [
+            -0.0016711950302124023,
+            -0.012825310230255127,
+            1.1920928955078125e-07,
+            0.0
+          ],
+          "target_expert_response": 0.6731399297714233,
+          "target_expert_delta": -0.012825310230255127,
+          "argmax_expert": "temporal",
+          "argmax_is_target": true
+        },
+        "motion_freeze": {
+          "expert": "motion",
+          "row": [
+            0.44139012694358826,
+            0.6922042369842529,
+            0.6160528063774109,
+            0.551662802696228
+          ],
+          "delta_vs_clean": [
+            0.000913083553314209,
+            0.006238996982574463,
+            -0.0015801787376403809,
+            -0.0015031695365905762
+          ],
+          "target_expert_response": 0.44139012694358826,
+          "target_expert_delta": 0.000913083553314209,
+          "argmax_expert": "temporal",
+          "argmax_is_target": false
+        }
+      }
+    },
+    "diagonal_dominance": {
+      "per_artifact_hit": {
+        "temporal_jitter": true,
+        "motion_ghost": false,
+        "compression_art": true,
+        "boundary_seam": true
+      },
+      "hit_rate": 0.75,
+      "margin_to_best_other": {
+        "temporal_jitter": 0.062064409255981445,
+        "motion_ghost": -0.243760347366333,
+        "compression_art": 0.4358930289745331,
+        "boundary_seam": 0.21273136138916016
+      }
+    },
+    "expert_standalone_auc": {
+      "motion": 0.5924602563820665,
+      "temporal": 0.8704566942984674,
+      "spectral": 0.7211185382264342,
+      "boundary": 0.8472701686492667
+    },
+    "inter_expert_cosine": [
+      [
+        1.0,
+        0.27335014939308167,
+        0.5221613645553589,
+        0.416207879781723
+      ],
+      [
+        0.27335014939308167,
+        1.0,
+        0.330179899930954,
+        0.15317970514297485
+      ],
+      [
+        0.5221613645553589,
+        0.330179899930954,
+        1.0,
+        0.42207494378089905
+      ],
+      [
+        0.416207879781723,
+        0.15317970514297485,
+        0.42207494378089905,
+        1.0
+      ]
+    ],
+    "inter_expert_offdiag_mean": 0.3528589904308319,
+    "gating": {
+      "mean_weights": {
+        "motion": 0.18478691577911377,
+        "temporal": 0.1422722339630127,
+        "spectral": 0.27991244196891785,
+        "boundary": 0.39302825927734375
+      },
+      "mean_entropy": 0.6777553558349609,
+      "difficulty_mean": 0.6471410393714905,
+      "difficulty_std": 0.049215659499168396
+    },
+    "timestamp": "2026-08-27T22:19:25"
+  },
+  "T5_efficiency": {
+    "car": {
+      "display": "CAR (ours)",
+      "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\final_car_v3\\checkpoints\\best_model.pt",
+      "parameters": {
+        "total": 5191013,
+        "total_M": 5.191,
+        "groups": {
+          "stem": 3595388,
+          "motion_head": 483840,
+          "boundary_head": 451584,
+          "fusion": 405060,
+          "temporal_head": 143616,
+          "experts": 67080,
+          "spectral_head": 43392,
+          "head_norms": 1024,
+          "gating": 29
+        }
+      },
+      "flops": {
+        "flops_G": 3.82,
+        "params_from_thop_M": 5.019,
+        "error": null,
+        "input_shape": [
+          1,
+          8,
+          3,
+          224,
+          224
+        ]
+      },
+      "speed": {
+        "gpu_fps": 67.4,
+        "gpu_latency_ms": 14.84,
+        "cpu_fps": 8.3,
+        "cpu_latency_ms": 120.4
+      },
+      "model_size": {
+        "fp32_MB": 19.8,
+        "int8_MB_est": 4.95
+      }
+    },
+    "efficientnet_b0": {
+      "display": "EfficientNet-B0",
+      "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_honest\\efficientnet_b0\\seed_42\\best_model.pt",
+      "parameters": {
+        "total": 4010110,
+        "total_M": 4.01,
+        "groups": {
+          "backbone": 4009246,
+          "stem": 864
+        }
+      },
+      "flops": {
+        "flops_G": 3.077,
+        "params_from_thop_M": 3.968,
+        "error": null,
+        "input_shape": [
+          1,
+          8,
+          3,
+          224,
+          224
+        ]
+      },
+      "speed": {
+        "gpu_fps": 181.7,
+        "gpu_latency_ms": 5.5,
+        "cpu_fps": 9.68,
+        "cpu_latency_ms": 103.3
+      },
+      "model_size": {
+        "fp32_MB": 15.3,
+        "int8_MB_est": 3.82
+      }
+    },
+    "xception": {
+      "display": "Xception",
+      "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_honest\\xception\\seed_42\\best_model.pt",
+      "parameters": {
+        "total": 24924658,
+        "total_M": 24.925,
+        "groups": {
+          "backbone": 24905170,
+          "stem": 19488
+        }
+      },
+      "flops": {
+        "flops_G": 40.431,
+        "params_from_thop_M": 24.92,
+        "error": null,
+        "input_shape": [
+          1,
+          8,
+          3,
+          224,
+          224
+        ]
+      },
+      "speed": {
+        "gpu_fps": 55.7,
+        "gpu_latency_ms": 17.94,
+        "cpu_fps": 3.15,
+        "cpu_latency_ms": 317.0
+      },
+      "model_size": {
+        "fp32_MB": 95.08,
+        "int8_MB_est": 23.77
+      }
+    },
+    "mesonet": {
+      "display": "MesoNet",
+      "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\results\\baseline_honest\\mesonet\\seed_42\\best_model.pt",
+      "parameters": {
+        "total": 274986,
+        "total_M": 0.275,
+        "groups": {
+          "other": 274986
+        }
+      },
+      "flops": {
+        "flops_G": 1.408,
+        "params_from_thop_M": 0.275,
+        "error": null,
+        "input_shape": [
+          1,
+          8,
+          3,
+          224,
+          224
+        ]
+      },
+      "speed": {
+        "gpu_fps": 305.4,
+        "gpu_latency_ms": 3.27,
+        "cpu_fps": 55.81,
+        "cpu_latency_ms": 17.9
+      },
+      "model_size": {
+        "fp32_MB": 1.05,
+        "int8_MB_est": 0.26
+      }
+    },
+    "hardware": {
+      "platform": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "torch": "2.5.1+cu121",
+      "timestamp": "2026-08-28T06:04:07",
+      "note": "FPS 为 batch=1、8 帧输入、独占 GPU 下测量"
+    }
+  },
+  "T6_per_method": {
+    "split_category_counts": {
+      "train": {
+        "TalkingFace": 14498,
+        "FaceSwap": 14050,
+        "FaceReenact": 9808,
+        "real_Celeb": 393,
+        "real_YouTube": 185
+      },
+      "val": {
+        "FaceSwap": 3495,
+        "real_Celeb": 89,
+        "TalkingFace": 3681,
+        "FaceReenact": 2424,
+        "real_YouTube": 45
+      },
+      "test": {
+        "real_Celeb": 108,
+        "real_YouTube": 70,
+        "FaceReenact": 1400,
+        "FaceSwap": 1740,
+        "TalkingFace": 2100
+      }
+    },
+    "fake_categories": [
+      "FaceReenact",
+      "FaceSwap",
+      "TalkingFace"
+    ],
+    "seen_in_test": [
+      "FaceReenact",
+      "FaceSwap",
+      "TalkingFace"
+    ],
+    "unseen_in_test": [],
+    "results": {
+      "car_clean_preds": {
+        "overall_auc": 0.8674854189896217,
+        "overall_ap": 0.9948129206723052,
+        "num_real": 178,
+        "FaceReenact": {
+          "count": 1400,
+          "auc_vs_real": 0.950854735152488,
+          "ap_vs_real": 0.9935225106000986,
+          "seen_in_train": true
+        },
+        "FaceSwap": {
+          "count": 1740,
+          "auc_vs_real": 0.650142063799561,
+          "ap_vs_real": 0.9322795748225172,
+          "seen_in_train": true
+        },
+        "TalkingFace": {
+          "count": 2100,
+          "auc_vs_real": 0.9919903691813805,
+          "ap_vs_real": 0.9991809875902666,
+          "seen_in_train": true
+        }
+      }
+    },
+    "timestamp": "2026-08-27T23:50:00"
+  },
+  "T7_tradeoff": {
+    "car_v2_noise_500subset": {
+      "noise_std=0.01": 0.9943994696070905,
+      "noise_std=0.02": 0.9957428990159816,
+      "noise_std=0.05": 0.20835368832437715
+    },
+    "car_v2_clean": 0.883679989707522,
+    "car_v3_clean": 0.8674854189896217,
+    "car_v3_noise": {
+      "noise_std=0.01": 0.8772107384852904,
+      "noise_std=0.02": 0.8685221717128399,
+      "noise_std=0.05": 0.8472499785573376
+    },
+    "note": "v2 噪声行来自 500 样本子集协议（旧），v3 行来自全量协议（新）；tradeoff 结论不受影响（v2 在 σ=0.05 崩溃 vs v3 -0.02）"
+  }
+}

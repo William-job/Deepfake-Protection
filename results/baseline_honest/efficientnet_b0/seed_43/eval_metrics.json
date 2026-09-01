@@ -1,0 +1,29 @@
+{
+  "model": "efficientnet_b0",
+  "display_name": "EfficientNet-B0",
+  "seed": 43,
+  "checkpoint": "/root/trae/results/baseline_honest/efficientnet_b0/seed_43/best_model.pt",
+  "threshold_source": "val",
+  "scoring": "softmax",
+  "used_ema": false,
+  "num_samples": 5418,
+  "val_threshold_info": {
+    "val_num_samples": 9734,
+    "val_auc": 0.9045763370646767
+  },
+  "confusion_matrix": {
+    "tp": 4053,
+    "tn": 160,
+    "fp": 18,
+    "fn": 1187
+  },
+  "timestamp": "2026-08-26T04:03:44",
+  "auc": 0.9161055836692684,
+  "accuracy": 0.777593207825766,
+  "f1": 0.8705831811835464,
+  "ap": 0.9969041344008329,
+  "eer": 0.1797752808988764,
+  "tpr_at_fpr_1": 0.6862595419847328,
+  "tpr_at_fpr_01": 0.6532442748091603,
+  "threshold": 0.8603460788726807
+}

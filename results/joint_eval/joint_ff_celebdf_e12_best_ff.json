@@ -1,0 +1,36 @@
+{
+  "checkpoint": "results/joint_ff_celebdf_e12/best_ff.pt",
+  "ff_test": {
+    "num_samples": 350,
+    "overall_auc": 0.7668877551020409,
+    "overall_ap": 0.9224235937416105,
+    "per_method": {
+      "Deepfakes": {
+        "count": 70,
+        "auc_vs_real": 0.8248979591836735
+      },
+      "Face2Face": {
+        "count": 70,
+        "auc_vs_real": 0.7730612244897959
+      },
+      "FaceSwap": {
+        "count": 70,
+        "auc_vs_real": 0.7371428571428571
+      },
+      "NeuralTextures": {
+        "count": 70,
+        "auc_vs_real": 0.7324489795918367
+      }
+    }
+  },
+  "celeb_test": {
+    "num_samples": 5418,
+    "overall_auc": 0.7690684235354661,
+    "overall_ap": 0.9895083872958885
+  },
+  "reference": {
+    "car_v3_ff_zeroshot": 0.51,
+    "car_3seed_celeb_clean": 0.8648
+  },
+  "timestamp": "2026-08-29T12:33:03"
+}

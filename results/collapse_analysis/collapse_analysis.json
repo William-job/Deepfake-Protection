@@ -1,0 +1,60 @@
+{
+  "protocol": "frozen val threshold vs test-set oracle (Youden) on identical degraded scores; all-fake bound = majority-class accuracy under 1:29 imbalance",
+  "results": {
+    "efficientnet_b0": {
+      "clean": {
+        "auc": 0.8957,
+        "frozen_threshold": 0.8852,
+        "frozen_acc": 0.7745,
+        "youden_oracle_threshold": 0.9438,
+        "youden_oracle_acc": 0.7254,
+        "acc_oracle_threshold": 0.0226,
+        "acc_oracle": 0.9686
+      },
+      "noise_sigma=0.05": {
+        "auc": 0.5219,
+        "frozen_threshold": 0.8852,
+        "frozen_acc": 0.3291,
+        "youden_oracle_threshold": 1.0,
+        "youden_oracle_acc": 0.2953,
+        "acc_oracle_threshold": 0.0,
+        "acc_oracle": 0.9718
+      },
+      "all_fake_acc_bound": 0.9671,
+      "class_ratio": "1:29.4 (fake:real)"
+    },
+    "car": {
+      "clean": {
+        "auc": 0.8675,
+        "frozen_threshold": 0.6341,
+        "frozen_acc": 0.6702,
+        "youden_oracle_threshold": 0.5865,
+        "youden_oracle_acc": 0.682,
+        "acc_oracle_threshold": 0.0688,
+        "acc_oracle": 0.9673
+      },
+      "noise_sigma=0.05": {
+        "auc": 0.8472,
+        "frozen_threshold": 0.6341,
+        "frozen_acc": 0.6453,
+        "youden_oracle_threshold": 0.6072,
+        "youden_oracle_acc": 0.6798,
+        "acc_oracle_threshold": 0.1479,
+        "acc_oracle": 0.9677
+      },
+      "all_fake_acc_bound": 0.9671,
+      "class_ratio": "1:29.4 (fake:real)"
+    }
+  },
+  "verdict": {
+    "efficientnet_b0": {
+      "acc_oracle_minus_allfake": 0.0047,
+      "interpretation": "accuracy-oracle 不高于 all-fake 多数类基线 → 分数不携带可用于阈值恢复的类别信息，崩溃是排序性的"
+    },
+    "car": {
+      "acc_oracle_minus_allfake": 0.0006,
+      "interpretation": "accuracy-oracle 不高于 all-fake 多数类基线 → 分数不携带可用于阈值恢复的类别信息，崩溃是排序性的"
+    }
+  },
+  "timestamp": "2026-08-30T12:57:36"
+}

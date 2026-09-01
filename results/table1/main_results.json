@@ -1,0 +1,71 @@
+{
+  "table1_main_results": [
+    {
+      "config": "Celeb-DF++ test",
+      "dataset": "celebdf",
+      "split": "test",
+      "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\checkpoints_v6/best_model_joint_celebdf.pt",
+      "checkpoint_epoch": 8,
+      "config_path": "configs/joint_train.yaml",
+      "timestamp": "2026-06-28T12:18:23",
+      "used_ema": true,
+      "threshold_source": "val",
+      "threshold": 0.9316986799240112,
+      "auc": 0.8370861566172055,
+      "accuracy": 0.7779623477297896,
+      "f1": 0.8712956028672302,
+      "ap": 0.9886944968063491,
+      "eer": 0.20786516853932585,
+      "tpr_at_fpr_1": 0.0011450381679389313,
+      "tpr_at_fpr_01": 0.0003816793893129771,
+      "num_samples": 5418,
+      "confusion_matrix": {
+        "tp": 4072,
+        "tn": 143,
+        "fp": 35,
+        "fn": 1168
+      },
+      "val_threshold_info": {
+        "val_num_samples": 9734,
+        "val_auc": 0.8555169465174131
+      }
+    },
+    {
+      "config": "FF++ c23 test",
+      "dataset": "ffpp",
+      "split": "test",
+      "checkpoint": "C:\\Users\\86188\\Desktop\\trae\\checkpoints_v6/best_model_joint_ffpp.pt",
+      "checkpoint_epoch": 12,
+      "config_path": "configs/joint_train.yaml",
+      "timestamp": "2026-06-28T12:55:47",
+      "used_ema": true,
+      "threshold_source": "val",
+      "threshold": 0.0680808573961258,
+      "auc": 0.9239795918367347,
+      "accuracy": 0.8657142857142858,
+      "f1": 0.9111531190926276,
+      "ap": 0.9789475900056233,
+      "eer": 0.12857142857142856,
+      "tpr_at_fpr_1": 0.22142857142857142,
+      "tpr_at_fpr_01": 0.22142857142857142,
+      "num_samples": 350,
+      "confusion_matrix": {
+        "tp": 241,
+        "tn": 62,
+        "fp": 8,
+        "fn": 39
+      },
+      "compression": "c23",
+      "val_threshold_info": {
+        "val_num_samples": 350,
+        "val_auc": 0.9135714285714286
+      }
+    }
+  ],
+  "failed_configs": [
+    {
+      "config": "FF++ c40 test",
+      "reason": "c40 压缩等级帧数据未提取（Samples: 0），仅 c23 可用"
+    }
+  ]
+}

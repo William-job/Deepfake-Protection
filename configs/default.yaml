@@ -1,0 +1,65 @@
+model:
+  stem: efficientnet-b0
+  latent_dim: 128
+  latent_k: 4
+  num_heads: 4
+  num_transformer_layers: 2
+  top_k: 2
+  difficulty_hidden_dim: 128
+  difficulty_use_pairwise_cos: true
+  difficulty_use_z_norm: true
+
+data:
+  dataset: celebdf
+  data_root: "D:/Celeb-DF++/Celeb-DF-v3"
+  ff_root: "D:/FaceForensics++"
+  num_frames: 8
+  frame_stride: 2
+  image_size: 224
+  batch_size: 8
+  num_workers: 0
+  val_ratio: 0.2
+
+training:
+  epochs: 28
+  lr: 0.0003
+  lr_backbone: 0.00005
+  weight_decay: 0.0005
+  aux_loss_weight: 0.1
+  load_balance_weight: 0.05
+  difficulty_loss_weight: 0.05
+  min_expert_weight: 0.15
+  min_expert_threshold: 0.08
+  label_smoothing: 0.10
+  freeze_stem: true
+  temperature_start: 1.0
+  temperature_end: 0.1
+  difficulty_temperature_min: 0.2
+  difficulty_temperature_max: 2.0
+  difficulty_use_head_std: true
+  gating_difficulty_conditioned: true
+  temperature_anneal_epochs: 20
+  warmup_epochs: 0
+  early_stopping_patience: 28
+  grad_clip: 1.0
+  seed: 42
+  use_amp: true
+  qat_min_bit: 6
+  qat_max_bit: 8
+  qat_noise_scale: 0.015
+  cutmix_p: 0.15
+  cutmix_alpha: 1.0
+  ema_decay: 0.999
+  ema_enabled: true
+
+logging:
+  log_dir: ./logs_v5
+  checkpoint_dir: ./checkpoints_v5
+  log_interval: 20
+  eval_interval: 1
+  save_interval: 1
+
+quantization:
+  enabled: false
+  calibration_samples: 100
+  bit_widths: [4, 8, 16]

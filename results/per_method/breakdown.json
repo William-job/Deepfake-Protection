@@ -1,0 +1,62 @@
+{
+  "split_category_counts": {
+    "train": {
+      "TalkingFace": 14498,
+      "FaceSwap": 14050,
+      "FaceReenact": 9808,
+      "real_Celeb": 393,
+      "real_YouTube": 185
+    },
+    "val": {
+      "FaceSwap": 3495,
+      "real_Celeb": 89,
+      "TalkingFace": 3681,
+      "FaceReenact": 2424,
+      "real_YouTube": 45
+    },
+    "test": {
+      "real_Celeb": 108,
+      "real_YouTube": 70,
+      "FaceReenact": 1400,
+      "FaceSwap": 1740,
+      "TalkingFace": 2100
+    }
+  },
+  "fake_categories": [
+    "FaceReenact",
+    "FaceSwap",
+    "TalkingFace"
+  ],
+  "seen_in_test": [
+    "FaceReenact",
+    "FaceSwap",
+    "TalkingFace"
+  ],
+  "unseen_in_test": [],
+  "results": {
+    "car_clean_preds": {
+      "overall_auc": 0.8674854189896217,
+      "overall_ap": 0.9948129206723052,
+      "num_real": 178,
+      "FaceReenact": {
+        "count": 1400,
+        "auc_vs_real": 0.950854735152488,
+        "ap_vs_real": 0.9935225106000986,
+        "seen_in_train": true
+      },
+      "FaceSwap": {
+        "count": 1740,
+        "auc_vs_real": 0.650142063799561,
+        "ap_vs_real": 0.9322795748225172,
+        "seen_in_train": true
+      },
+      "TalkingFace": {
+        "count": 2100,
+        "auc_vs_real": 0.9919903691813805,
+        "ap_vs_real": 0.9991809875902666,
+        "seen_in_train": true
+      }
+    }
+  },
+  "timestamp": "2026-08-27T23:50:00"
+}

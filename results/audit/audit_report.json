@@ -1,0 +1,30 @@
+{
+  "data_root": "D:/Celeb-DF++/Celeb-DF-v3",
+  "checks": [
+    {
+      "check": "test_list_exists",
+      "passed": true,
+      "detail": "test 视频 5418 个"
+    },
+    {
+      "check": "no_real_fake_path_overlap",
+      "passed": true,
+      "detail": "交集 0 个"
+    },
+    {
+      "check": "identity_overlap_info",
+      "passed": true,
+      "detail": "身份交集 59 个（Celeb-DF 官方允许身份跨集，需记录）"
+    },
+    {
+      "check": "test_train_approx_disjoint",
+      "passed": false,
+      "detail": "重叠 5660 条（endswith 近似）"
+    },
+    {
+      "check": "checkpoint_provenance",
+      "passed": false,
+      "detail": "默认 checkpoints/best_model.pt 与 checkpoints_v5/best_model.pt 大小不一致（评估用错 checkpoint 风险）"
+    }
+  ]
+}
