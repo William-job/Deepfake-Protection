@@ -1,4 +1,6 @@
-# Deepfake-Protection
+Naming: the paper's motion/spectral/boundary experts correspond to the
+flow/frequency/blending modules in this codebase (FlowExpert,
+SpectralExpert, BlendingExpert).# Deepfake-Protection
 
 Code, trained model weights, and frozen evaluation artifacts for **CAR — a multi-expert
 deepfake detector with difficulty-aware routing and curriculum training** (paper under review).
