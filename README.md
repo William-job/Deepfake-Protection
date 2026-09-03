@@ -1,16 +1,20 @@
-Naming: the paper's motion/spectral/boundary experts correspond to the
-flow/frequency/blending modules in this codebase (FlowExpert,
-SpectralExpert, BlendingExpert).# Deepfake-Protection
+# Deepfake-Protection
 
 Code, trained model weights, and frozen evaluation artifacts for **CAR — a multi-expert
-deepfake detector with difficulty-aware routing and curriculum training** (paper under review).
+deepfake detector with difficulty-aware routing and curriculum training**, from the paper
+*"Graceful Degradation, Not Collapse: Compositional Artifact Routing for Robust Deepfake
+Detection under Quality Degradation"* (under review).
 
-CAR couples four complementary forensic experts — **temporal**, **flow**, **frequency**, and
-**blending** — with a learned, difficulty-conditioned router, and is trained in a staged
+CAR couples four complementary forensic experts — **temporal**, **motion**, **spectral**, and
+**boundary** — with a learned, difficulty-conditioned router, and is trained in a staged
 curriculum that ends with a noise-focused finetuning stage. All released evaluation results
 follow a frozen protocol: decision thresholds are selected on the **validation** split only,
 and the **raw prediction scores** for every model are shipped alongside the metrics, so every
 reported number and statistical test can be reproduced exactly from this repository.
+
+> **Naming note.** The paper's motion / spectral / boundary experts correspond to the
+> flow / frequency / blending modules in this codebase (`FlowExpert`, `SpectralExpert`,
+> `BlendingExpert`); the temporal expert keeps its name in both.
 
 ## Repository layout
 
