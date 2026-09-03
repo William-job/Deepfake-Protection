@@ -35,7 +35,9 @@ pip install -r requirements.txt
 
 Tested with Python 3.11 + PyTorch 2.x (CUDA).
 
-**Datasets are NOT included.** Experiments use Celeb-DF++ and FaceForensics++ (c23).
+**Datasets are NOT included.** Experiments use Celeb-DF++ (Li et al., 2025,
+arXiv:2507.18015, released by the original Celeb-DF authors; access via the
+request form at github.com/OUC-VAS/Celeb-DF-PP) and FaceForensics++ (c23).
 Download them from their official sources and point `data_root` / `ff_root` in
 `configs/*.yaml` to your local copies. Consistent with the ethics statement, this
 repository releases code, weights, and prediction scores only — no videos or frames.
